@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+//class CatError : public std::exception {
+//public:
+//    const char* what() const noexcept {
+//        return "Cat done throwed up on yer shirt";
+//    }
+//};
+
+
 class Animal {
     string message = "I am animal";
 public:
@@ -19,10 +27,10 @@ public:
 };
 int main() {
     try {
-        throw Cat();
+        throw runtime_error("Cat done throwed up");
     }
-    catch(Animal e) {
-        cout << e.getMessage() << endl;
+    catch(runtime_error &e) {
+        cout << e.what() << endl;
     }
     return 0;
 }
