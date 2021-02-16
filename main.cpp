@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
 
-//class CatError : public std::exception {
-//public:
-//    const char* what() const noexcept {
-//        return "Cat done throwed up on yer shirt";
-//    }
-//};
-
 
 class Animal {
     string message = "I am animal";
